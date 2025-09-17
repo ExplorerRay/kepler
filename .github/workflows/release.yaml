@@ -12,7 +12,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      IMG_BASE: ghcr.io/ExplorerRay
+      IMG_BASE: ghcr.io/explorerray
 
     steps:
       - name: Checkout source

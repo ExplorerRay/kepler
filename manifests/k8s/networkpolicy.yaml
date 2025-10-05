@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: kepler
+  namespace: kepler
+  labels:
+    app.kubernetes.io/name: kepler
+    app.kubernetes.io/part-of: kepler
+spec:
+  ingress:
+    - ports:
+        - protocol: TCP
+          port: 28282
+  egress: {}
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: kepler
+      app.kubernetes.io/part-of: kepler
+  policyTypes:
+    - Ingress
+    - Egress
